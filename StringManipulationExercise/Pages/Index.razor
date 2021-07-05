@@ -1,0 +1,37 @@
+﻿@page "/"
+@inject StringManipulationService StringManipulationService
+
+<div class="main">
+    <div class="head">
+        <h1>String Manipulation</h1>
+    </div>
+    <div class="string-box">
+        <p class="string-question">Reversa stringen</p>
+        <p class="string-answer">@ReversedString</p>
+    </div>
+    <div class="string-box">
+        <p class="string-question">Gör varanat ord små/stora bokstäver</p>
+        <p class="string-answer">@EvenOddString</p>
+    </div>
+    <div class="string-box">
+        <p class="string-question">Gör om stringen till rövarspråk</p>
+        <p class="string-answer">@RobberLanguage</p>
+    </div>
+    <div class="string-box">
+        <p class="string-question">Lägg till 'DOT' efter varje punkt(som avslutar en mening)</p>
+        <p class="string-answer">@DotAfterDot</p>
+    </div>
+</div>
+
+@code {
+    private string ReversedString = "Dunder är Dunder är Dunder";
+    private string EvenOddString = "häR kommEr bli Collt";
+    private string RobberLanguage = "här kommer jonkels konk-sång";
+    private string DotAfterDot = "Det blir några punkter. Kanske 2.5 till. Vi får se...";
+
+    protected override void OnInitialized()
+    {
+        ReversedString = StringManipulationService.ReverseString(ReversedString);
+        EvenOddString = StringManipulationService.EvenOdd(EvenOddString);
+    }
+}
