@@ -16,5 +16,16 @@ namespace StringManipulationExercise
         {
             return input;
         }
+
+        public string RobberLanguage(string input)
+        {
+            return input;
+        }
+
+        public string DotAfterDot(string input)
+        {
+            return input;
+        }
+
     }
 }

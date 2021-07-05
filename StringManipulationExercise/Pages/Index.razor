@@ -15,23 +15,25 @@
     </div>
     <div class="string-box">
         <p class="string-question">Gör om stringen till rövarspråk</p>
-        <p class="string-answer">@RobberLanguage</p>
+        <p class="string-answer">@RobberLanguageString</p>
     </div>
     <div class="string-box">
         <p class="string-question">Lägg till 'DOT' efter varje punkt(som avslutar en mening)</p>
-        <p class="string-answer">@DotAfterDot</p>
+        <p class="string-answer">@DotAfterDotString</p>
     </div>
 </div>
 
 @code {
     private string ReversedString = "Dunder är Dunder är Dunder";
     private string EvenOddString = "häR kommEr bli Collt";
-    private string RobberLanguage = "här kommer jonkels konk-sång";
-    private string DotAfterDot = "Det blir några punkter. Kanske 2.5 till. Vi får se...";
+    private string RobberLanguageString = "här kommer jonkels konk-sång";
+    private string DotAfterDotString = "Det blir några punkter. Kanske 2.5 till. Vi får se...";
 
     protected override void OnInitialized()
     {
         ReversedString = StringManipulationService.ReverseString(ReversedString);
         EvenOddString = StringManipulationService.EvenOdd(EvenOddString);
+        RobberLanguageString = StringManipulationService.RobberLanguage(RobberLanguageString);
+        DotAfterDotString = StringManipulationService.DotAfterDot(DotAfterDotString);
     }
 }

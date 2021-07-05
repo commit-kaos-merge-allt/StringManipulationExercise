@@ -9,6 +9,15 @@
     font-size: 62px;
 }
 
+.head h1::after {
+    content: "String Manipulation";
+    color: #1c1c1c;
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 155px;
+}
+
 .main {
     margin-left: 8rem;
     margin-right: 8rem;
